@@ -6,6 +6,16 @@
 <body>
     <h1>{{ username }}</h1>
     <p>Follower Count: {{ follower_count }}</p>
-    <p>Follower posts: {{ posts }}</p>
+    <h2>Posts</h2>
+    <ul>
+    {% for post in posts %}
+        <li>
+            <p>Likes: {{ post.likes }}</p>
+            <p>Comments: {{ post.comments }}</p>
+            <!-- Add views count if available -->
+            <!-- <p>Views: {{ post.views }}</p> -->
+        </li>
+    {% endfor %}
+    </ul>
 </body>
 </html>
